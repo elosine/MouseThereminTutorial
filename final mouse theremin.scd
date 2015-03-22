@@ -18,12 +18,15 @@ SynthDef( \mt, {
 } ).add;
 
 a = Synth(\mt);
+a.free;
 
+(
 a.set(
 	\rate, 0.0, \ffreqlo, 20000, \ffreqhi, 20000,
-	\osc2amp, 0.0, \osc3amp, 0.3, \osc1amp, 0.7,
-	\osc3tune, -24, \osc1tune, 12
+	\osc2amp, 0.2, \osc3amp, 0.4, \osc1amp, 0.4,
+	\osc3tune, -24, \osc1tune, 12, \osc2tune, 11.5
 );
+)
 
 a.set(
 	\rate, 11.3, \ffreqlo, 200, \ffreqhi, 7000,
